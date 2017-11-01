@@ -2,8 +2,10 @@
 	"/": {
 		"slides": [
 			{
-				"section": "Slide 1",
-				"sectionWrapper": {},
+				"section": "Welcome!",
+				"sectionWrapper": {
+					"data-state": "simply-filter simply-orange"
+				},
 				"data-simply-template": "Simple"
 			}
 		]
