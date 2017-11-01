@@ -1,0 +1,481 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Investor pitch</title>
+
+		<link rel="stylesheet" href="/css/reveal.css">
+		<link rel="stylesheet" href="/css/theme/night.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '/css/print/pdf.css' : '/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans" rel="stylesheet">
+	</head>
+	<body>
+		<div class="reveal">
+			<template data-simply-template="Simple" id="reveal-simple">
+				<section data-simply-content="attributes" data-simply-attributes="data-transition data-state data-background-image data-background-transition data-background" data-simply-field="sectionWrapper"><div data-simply-field="section">Slide 1</div></section>
+			</template>
+			<template data-simply-template="Table" id="reveal-table">
+				<section data-simply-content="attributes" data-simply-attributes="data-transition data-state data-background-image data-background-transition data-background" data-simply-field="sectionWrapper">
+					<div>
+						<h1 data-simply-field="section">Slide 1</h1>
+						<div data-simply-field="table">
+							<table><tbody><tr><th></th><th></th><th></th><th></th></tr><tr><th></th><td></td><td></td><td></td></tr><tr><th></th><td></td><td></td><td></td></tr></tbody></table>
+						</div>
+					</div>
+				</section>
+			</template>
+			<template data-simply-template="Nested" id="reveal-nested">
+				<section data-simply-list="sections">
+					<template data-simply-template="Simple" rel="reveal-simple"></template>
+					<template data-simply-template="Table" rel="reveal-table"></template>
+				</section>
+			</template>
+			<div class="slides" data-simply-list="slides">
+				<template data-simply-template="Simple" rel="reveal-simple"></template>
+				<template data-simply-template="Table" rel="reveal-table"></template>
+				<template data-simply-template="Nested" rel="reveal-nested"></template>
+			</div>
+		</div>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			document.addEventListener("simply-data-applied", function() {
+				// More info https://github.com/hakimel/reveal.js#configuration
+				Reveal.initialize({
+					history: true,
+					// More info https://github.com/hakimel/reveal.js#dependencies
+					backgroundTransition: 'none',
+					dependencies: [
+						{ src: '/plugin/markdown/marked.js' },
+						{ src: '/plugin/markdown/markdown.js' },
+						{ src: '/plugin/notes/notes.js', async: true },
+						{ src: '/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+					]
+				});
+			});
+
+			document.addEventListener("databind:resolved", function() {
+				if (window.syncTimer) {
+					return;
+				}
+				var target = this;
+				window.syncTimer = window.setTimeout(function() {
+					var state = Reveal.getState();
+					editor.fireEvent("databinding:pause", target);
+					Reveal.sync();
+					console.log("synced");
+					Reveal.setState(state);
+					editor.fireEvent("databinding:resume", target);
+					window.syncTimer = null;
+				}, 300);
+			});
+
+			document.addEventListener("databinding:valuechanged", function() {
+				Reveal.sync();
+			});
+		</script>
+		<script>
+			var textSettings = {
+				'block' : [
+					{tag : 'h1', name : 'Heading 1'},
+					{tag : 'h2', name : 'Heading 2'},
+					{tag : 'h3', name : 'Heading 3'},
+					{tag : 'p', name : 'Paragraph'},
+					{tag : 'blockquote', name : 'Blockquote'}
+				],
+				'inline' : [
+					{tag : 'q', name : 'Quote', icon : 'fa-code'},
+					{tag : 'em', name : 'Italic', icon : 'fa-italic'},
+					{tag : 'code', name: 'Code', icon: 'fa-code'},
+					{tag : 'span', name: 'Span', icon: 'fa-code'}
+				],
+				'style' : [
+					{
+						"description" : "Heading highlight",
+						"selector" : "h1,h2,h3,h4",
+						"styles" : [
+							{class : 'highlight', name : 'Highlight', icon : 'fa-paint-brush'}
+						]
+					},
+					{
+						"description" : "Image size",
+						"selector" : "img",
+						"styles" : [
+							{class : 'medium', name : 'Medium', icon : 'fa-paint-brush'},
+							{class : 'large', name : 'Large', icon : 'fa-paint-brush'},
+							{class : 'wide', name : 'Wide', icon : 'fa-paint-brush'},
+							{class : 'fullwidth', name : 'Full width', icon : 'fa-paint-brush'}
+						]
+					},
+/*					{
+						"description" : "Fragment",
+						"selector" : "section *",
+						"styles" : [
+							{class: 'fragment', name : 'Fragment', icon : 'fa-paint-brush'}
+						]
+					},
+					{
+						"description" : "Fade in style",
+						"selector" : ".fragment",
+						"styles" : [
+							{class: 'fade-up', name : 'Fade up', icon : 'fa-paint-brush'},
+							{class: 'fade-left', name : 'Fade left', icon : 'fa-paint-brush'},
+							{class: 'fade-right', name : 'Fade right', icon : 'fa-paint-brush'},
+							{class: 'fade-down', name : 'Fade down', icon : 'fa-paint-brush'}
+						]
+					},
+					{
+						"description" : "Highlight style",
+						"selector" : ".fragment",
+						"styles" : [
+							{class: 'grow', name : 'Grow', icon : 'fa-paint-brush'},
+							{class: 'shrink', name : 'Shrink', icon : 'fa-paint-brush'},
+							{class: 'fade-out', name : 'Fade out', icon : 'fa-paint-brush'},
+							{class: 'highlight-red', name : 'Highlight red', icon : 'fa-paint-brush'},
+							{class: 'highlight-blue', name : 'Highlight blue', icon : 'fa-paint-brush'},
+							{class: 'highlight-green', name : 'Highlight green', icon : 'fa-paint-brush'}
+						]
+					},
+*/					{
+						"description" : "Background image",
+						"selector" : "section",
+						"styles" : [
+							{attribute : {'data-background-image' : 'img/H_01.jpg'}, name : "H Img 1", icon : 'fa-paint-brush'},
+							{attribute : {'data-background-image' : 'img/H_02.jpg'}, name : "H Img 2", icon : 'fa-paint-brush'},
+							{attribute : {'data-background-image' : 'img/H_03.jpg'}, name : "H Img 3", icon : 'fa-paint-brush'},
+							{attribute : {'data-background-image' : 'img/H_04.jpg'}, name : "H Img 4", icon : 'fa-paint-brush'},
+							{attribute : {'data-background-image' : 'img/H_05.jpg'}, name : "H Img 5", icon : 'fa-paint-brush'},
+							{attribute : {'data-background-image' : 'img/H_06.jpg'}, name : "H Img 6", icon : 'fa-paint-brush'}
+						]
+					},
+					{
+						"description" : "Background filter",
+						"selector" : "section",
+						"styles" : [
+							{attribute : {'data-state' : 'simply-filter simply-orange'}, name : "Orange", icon : 'fa-paint-brush'},
+							{attribute : {'data-state' : 'simply-filter simply-purple'}, name : "Purple", icon : 'fa-paint-brush'},
+							{attribute : {'data-state' : 'simply-filter simply-aqua'}, name : "Aqua", icon : 'fa-paint-brush'},
+						]
+					},
+					{
+						"description" : "Large cover left",
+						"selector" : "section",
+						"styles" : [
+							{attribute : {'data-state' : 'simply-filter simply-covered-left simply-orange'}, name : "Orange", icon : 'fa-paint-brush'},
+							{attribute : {'data-state' : 'simply-filter simply-covered-left simply-purple'}, name : "Purple", icon : 'fa-paint-brush'},
+							{attribute : {'data-state' : 'simply-filter simply-covered-left simply-aqua'}, name : "Aqua", icon : 'fa-paint-brush'},
+						]
+					},
+					{
+						"description" : "Large cover right",
+						"selector" : "section",
+						"styles" : [
+							{attribute : {'data-state' : 'simply-filter simply-covered-right simply-orange'}, name : "Orange", icon : 'fa-paint-brush'},
+							{attribute : {'data-state' : 'simply-filter simply-covered-right simply-purple'}, name : "Purple", icon : 'fa-paint-brush'},
+							{attribute : {'data-state' : 'simply-filter simply-covered-right simply-aqua'}, name : "Aqua", icon : 'fa-paint-brush'},
+						]
+					},
+					{
+						"description" : "Small cover left",
+						"selector" : "section",
+						"styles" : [
+							{attribute : {'data-state' : 'simply-filter simply-open-left simply-orange'}, name : "Orange", icon : 'fa-paint-brush'},
+							{attribute : {'data-state' : 'simply-filter simply-open-left simply-purple'}, name : "Purple", icon : 'fa-paint-brush'},
+							{attribute : {'data-state' : 'simply-filter simply-open-left simply-aqua'}, name : "Aqua", icon : 'fa-paint-brush'},
+						]
+					},
+					{
+						"description" : "Small cover right",
+						"selector" : "section",
+						"styles" : [
+							{attribute : {'data-state' : 'simply-filter simply-open-right simply-orange'}, name : "Orange", icon : 'fa-paint-brush'},
+							{attribute : {'data-state' : 'simply-filter simply-open-right simply-purple'}, name : "Purple", icon : 'fa-paint-brush'},
+							{attribute : {'data-state' : 'simply-filter simply-open-right simply-aqua'}, name : "Aqua", icon : 'fa-paint-brush'},
+						]
+					},
+/*					{
+						"description" : "Slide transition",
+						"selector" : "section",
+						"styles" : [
+							{attribute : {'data-transition' : "zoom"}, name : "Zoom", icon : 'fa-paint-brush'}
+						]
+					},
+					{
+						"description" : "Background transition",
+						"selector" : "section",
+						"styles" : [
+							{attribute : {'data-background-transition' : "zoom"}, name : "Zoom", icon : 'fa-paint-brush'}
+						]
+					}
+*/
+				]
+			};
+
+			var myCustomSettings = {
+				'simply-text-cursor': textSettings,
+				'simply-text-selection' : textSettings,
+				'simply-image-field' : textSettings,
+				'simply-image' : textSettings
+			};	
+		</script>
+		<style type="text/css">
+			body {
+				background: white;
+			}
+			.reveal {
+				color: #333;
+				font-family: "Open sans", sans-serif;
+			}
+			.reveal h1,
+			.reveal h2,
+			.reveal h3,
+			.reveal h4 {
+				color: #333;
+				font-family: "Alegreya Sans", sans-serif;
+			}
+			.reveal h1 {
+				font-size: 2em;
+			}
+			.reveal h2 {
+				font-size: 1.8em;
+			}
+			.reveal h3 {
+				font-size: 1.6em;
+			}
+			.reveal h4 {
+				font-size: 1.4em;
+			}
+
+			html.simply-filter .reveal,
+			html.simply-filter .reveal h1,
+			html.simply-filter .reveal h2,
+			html.simply-filter .reveal h3,
+			html.simply-filter .reveal h4 {
+				color: white;
+			}
+
+			html.simply-covered-left .reveal,
+			html.simply-covered-right .reveal, 
+			html.simply-covered-left .reveal h1,
+                        html.simply-covered-right .reveal h1,
+			html.simply-covered-left .reveal h2,
+                        html.simply-covered-right .reveal h2,
+			html.simply-covered-left .reveal h3,
+                        html.simply-covered-right .reveal h3,
+			html.simply-covered-left .reveal h4,
+                        html.simply-covered-right .reveal h4 {
+				color: #333;
+			}
+
+			html:not(.simply-filter) .reveal .highlight,
+			html.simply-covered-left .reveal .highlight,
+			html.simply-covered-right .reveal .highlight {
+				color: rgba(255, 128, 3, 1)
+			}
+			html.simply-purple.simply-covered-left .reveal .highlight,
+			html.simply-purple.simply-covered-right .reveal .highlight {
+				color: rgba(106, 33, 204, 1);
+			}
+			html.simply-aqua.simply-covered-left .reveal .highlight,
+			html.simply-aqua.simply-covered-right .reveal .highlight {
+				color: rgba(34, 242, 223, 1);
+			}
+
+			.reveal .slide-background:after,
+			.reveal .slide-background:before {
+				x-webkit-transition: all 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+				xtransition: left 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+			}
+
+			html .backgrounds .slide-background.past:before,
+			html .backgrounds .slide-background.past:after {
+				x-display: none;
+			}
+
+			html.simply-covered-left .backgrounds .slide-background:after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 0;
+				margin-top: -17vw;
+				margin-left: 86vw;
+				width: 34vw;
+				height: 34vw;
+				box-shadow: -1027vw 0px 0px 1000vw #fff;
+				border-top-left-radius: 100%;
+				border-bottom-left-radius: 100%;
+			}
+
+			html.simply-covered-right .backgrounds .slide-background:after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				right: 0;
+				margin-top: -17vw;
+				margin-right: 86vw;
+				width: 34vw;
+				height: 34vw;
+				box-shadow: 1027vw 0px 0px 1000vw #fff;
+				border-top-right-radius: 100%;
+				border-bottom-right-radius: 100%;
+			}
+
+
+			html.simply-open-left .backgrounds .slide-background:after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 0;
+				margin-top: -17vw;
+				margin-left: -27vw;
+				width: 34vw;
+				height: 34vw;
+				xbox-shadow: -1020vw 0px 0px 1000vw #fff;
+				border-top-right-radius: 100%;
+				border-bottom-right-radius: 100%;
+				background-color: white;
+			}
+
+			html.simply-open-right .backgrounds .slide-background:after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				right: 0;
+				margin-top: -17vw;
+				margin-right: -27vw;
+				width: 34vw;
+				height: 34vw;
+				xbox-shadow: 1020vw 0px 0px 1000vw #fff;
+				border-top-left-radius: 100%;
+				border-bottom-left-radius: 100%;
+				background-color: white;
+			}
+			html.simply-open-right .backgrounds .slide-background {
+				border-right: 7vw solid white;
+				margin-left: -7vw;
+			}
+			html.simply-open-left .backgrounds .slide-background {
+				border-left: 7vw solid white;
+			}
+
+			html.simply-filter .backgrounds .slide-background:before {
+				content: '';
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				right: 0px;
+				bottom: 0px;
+			}
+			html.simply-orange .backgrounds .slide-background:before {
+				background: linear-gradient(to bottom, rgba(255, 128, 3, 0.82) 0%, rgba(241, 102, 35, 0.82) 100%);
+			}
+			html.simply-purple .backgrounds .slide-background:before {
+				background: linear-gradient(to bottom, rgba(106, 33, 204, 0.82) 0%, rgba(77, 31, 138, 0.82) 100%);
+			}
+			html.simply-aqua .backgrounds .slide-background:before {
+				background: linear-gradient(to bottom, rgba(34, 242, 223, 0.82) 0%, rgba(43, 138, 129, 0.82) 100%);
+			}
+			.reveal section img {
+				max-height: 3em;
+				border: 0;
+				vertical-align: middle;
+				box-shadow: initial;
+				background: initial;
+			}
+			.reveal section img.large {
+				max-height: 80%;
+				max-width: 80%;
+			}
+			.reveal section img.medium {
+				width: 3em;
+				max-height: initial;
+			}
+
+			.reveal section img.wide {
+				width: 70%;
+				max-height: initial;
+			}
+			.reveal section img.fullwidth {
+				width: 100%;
+				max-height: initial;
+			}
+			.reveal a {
+				color: inherit;
+			}
+		</style>
+		<style>
+			body[data-simply-edit] th:hover,
+			body[data-simply-edit] td:hover {
+				outline: 1px dotted #888;
+			}
+			table th {
+				background-color: rgba(255, 128, 3, 1);
+				color: white;
+				width: 20%;
+				height: 2em;
+			}
+			table td {
+				background-color: #eee;
+				width: 20%;
+				height: 4em;
+				text-align: center;
+			}
+			table th:not(:last-child),table td:not(:last-child) {
+				border-right: 10px solid transparent;
+			}
+			table tr:first-child th {
+				border-bottom: 10px solid transparent;
+			}
+			.reveal table {
+				table-layout: fixed;
+				width: 90%;
+				min-width: 640px;
+				border-collapse: collapse;
+				border-bottom-right-radius: 80px;
+				overflow: hidden;
+				font-size: 1.8rem;
+			}
+			table tr:first-child th:first-child {
+				background-color: transparent;
+			}
+			.reveal table th,
+			.reveal table td {
+				text-align: inherit;
+				padding: inherit;
+				border-bottom: inherit;
+				vertical-align: middle;
+			}
+		</style>
+		<style type="text/css">
+			section.simply-section.active {
+			    top: 0px !important;
+			    right: 0px !important;
+			    left: inherit !important;
+			    z-index: 1000001 !important;
+			    margin-top: 0;
+			    position: fixed;
+			}
+		</style>
+		<script x-src="https://cdn.simplyedit.io/1/simply-edit.js"
+			src="//yvo.muze.nl/simply-edit/js/simply-edit.js"
+			data-api-key="github"
+			data-simply-endpoint="https://github.com/ylebre/simply-presentation/"
+			data-simply-images="/img/"
+			data-simply-settings="myCustomSettings"
+		></script>
+	</body>
+</html>

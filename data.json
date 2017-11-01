@@ -1,0 +1,401 @@
+{
+	"/": {
+		"slides": [
+			{
+				"section": "<p><img data-simply-src=\"http://pitch.se-examples.muze.nl/img/Logo_SimplyEdit_Wit.svg\" alt=\"\" class=\"fullwidth\"></p><p>Finally, a Simple Web Editor that just works.</p><p><a href='/product/'>Product presentation</a> - <a href='/investor/'>Investor pitch</a></p>",
+				"sectionWrapper": {
+					"data-state": "simply-filter simply-orange",
+					"data-background-image": "/img/H_04.jpg"
+				},
+				"data-simply-template": "Simple"
+			}
+		]
+	},
+	"/investor/": {
+		"slides": [
+			{
+				"section": "<p><img data-simply-src=\"http://pitch.se-examples.muze.nl/img/Logo_SimplyEdit_Wit.svg\" alt=\"\" class=\"fullwidth\"></p><p>Finally, a Simple True Web Editor that just works.</p><p><br></p><p>summer 2017<br></p>",
+				"sectionWrapper": {
+					"data-state": "simply-filter simply-orange",
+					"data-background-image": "/img/H_04.jpg"
+				},
+				"data-simply-template": "Simple"
+			},
+			{
+				"sections": [
+					{
+						"section": "<h1>SimplyEdit</h1><p>The first true frontend web editor</p><p>for websites and webapplications<br></p>",
+						"sectionWrapper": {
+							"data-state": "simply-filter simply-open-right simply-orange",
+							"data-background-image": "/img/H_04.jpg"
+						},
+						"data-simply-template": "Simple"
+					},
+					{
+						"section": "<h1>The web is too Complex</h1><p class=\"simply-text-align-left\">CMS and frameworks cost too much in maintenance, security, integration and development</p><p><br></p><p class=\"simply-text-align-left\">Implementing original design is expensive</p><p><br></p><p class=\"simply-text-align-left\">Current web editors are not intuitive<br></p>",
+						"sectionWrapper": {
+							"data-state": "simply-filter simply-open-right simply-purple",
+							"data-background-image": "/img/H_04.jpg"
+						},
+						"data-simply-template": "Simple"
+					},
+					{
+						"section": "<h1>Return to Simplicity</h1><p class=\"simply-text-align-left\">Reduce unnecessary complexity - static data, truly serverless, no website/webapp distinction</p><p><br></p><p class=\"simply-text-align-left\">Publish HTML directly</p><p><br></p><p class=\"simply-text-align-left\">Perfect user experience - style protection, works&nbsp; on any device on any browser, no training required<br></p><p><br></p>",
+						"sectionWrapper": {
+							"data-state": "simply-filter simply-open-right simply-aqua",
+							"data-background-image": "/img/H_04.jpg"
+						},
+						"data-simply-template": "Simple"
+					}
+				],
+				"data-simply-template": "Nested"
+			},
+			{
+				"sections": [
+					{
+						"section": "<h1>Product</h1><img data-simply-src=\"http://pitch.se-examples.muze.nl/img/product.png\" alt=\"\" class=\"large\"><br><a href=\"simplyedit.io\">Demo: http://simplyedit.io/</a>",
+						"sectionWrapper": {
+							"data-state": "simply-filter simply-open-left simply-orange",
+							"data-background-image": "/img/H_03.jpg"
+						},
+						"data-simply-template": "Simple"
+					},
+					{
+						"section": "<h1>USP's</h1><p class=\"simply-text-align-right\">Edit anything in the browser<br></p><p class=\"simply-text-align-right\">Requires only existing knowledge</p><p class=\"simply-text-align-right\">1 method for sites and apps</p><p class=\"simply-text-align-right\">Separates&nbsp; frontend from backend</p><p class=\"simply-text-align-right\">Easily extendable</p><p class=\"simply-text-align-right\">Works offline</p><p class=\"simply-text-align-right\">Saves time, resources and money</p>",
+						"sectionWrapper": {
+							"data-state": "simply-filter simply-open-left simply-purple",
+							"data-background-image": "/img/H_03.jpg"
+						},
+						"data-simply-template": "Simple"
+					}
+				],
+				"data-simply-template": "Nested"
+			},
+			{
+				"sections": [
+					{
+						"section": "<h1>Tech Overview</h1><p>Technology used:<br></p><p><img data-simply-src=\"http://pitch.se-examples.muze.nl/img/icons/HTML5_Logo_128.png\" alt=\"\" class=\"medium\"><img data-simply-src=\"http://pitch.se-examples.muze.nl/img/icons/CSS3_logo_and_wordmark.svg.png\" alt=\"\"></p><p>(people know this already)<br></p><p>\n</p>",
+						"sectionWrapper": {
+							"data-state": "simply-filter simply-covered-left simply-orange",
+							"data-background-image": "/img/H_04.jpg"
+						},
+						"data-simply-template": "Simple"
+					},
+					{
+						"section": "<h1>In-depth Tech</h1><h1><img data-simply-src=\"http://pitch.se-examples.muze.nl/img/machine.jpg\" alt=\"\" class=\"fullwidth\"></h1><p><br></p>",
+						"sectionWrapper": {
+							"data-state": "simply-filter simply-covered-left simply-purple",
+							"data-background-image": "/img/H_04.jpg"
+						},
+						"data-simply-template": "Simple"
+					},
+					{
+						"section": "<h1>How to use it</h1><p><img data-simply-src=\"http://pitch.se-examples.muze.nl/img/code.jpg\" alt=\"\" class=\"wide\"><br></p><p><br></p>",
+						"sectionWrapper": {
+							"data-state": "simply-filter simply-covered-left simply-aqua",
+							"data-background-image": "/img/H_04.jpg"
+						},
+						"data-simply-template": "Simple"
+					},
+					{
+						"section": "Two way databinding - lists in lists in lists - sorting and\n      ordering - external data sources - responsive images - JSON - IPFS\n      - distributed web - decentralized web - SVG visualizations - REST API - progressive web - serverless - real time visualisation - in place\n      editing - e-commerce - prerendering - data dashboards - versioned content - offline mode - JSON querySelector -\n      contentEditable - Hope - templating - web components - polymer -\n      custom storage backends - video subtitles - charts and graphs -\n      CMS integrations - plugins and toolbars - custom elements in HTML5\n      - responsive grids<br>",
+						"sectionWrapper": {
+							"data-state": "simply-filter simply-aqua",
+							"data-background-image": "/img/H_04.jpg"
+						},
+						"data-simply-template": "Simple"
+					}
+				],
+				"data-simply-template": "Nested"
+			},
+			{
+				"sections": [
+					{
+						"section": "<h1 class=\"simply-text-align-center\">Market Size</h1><p class=\"simply-text-align-left\"><img data-simply-src=\"http://pitch.se-examples.muze.nl/img/icons/Bol_20.png\" alt=\"\"> Number of active websites<br></p><p class=\"simply-text-align-left\"><img data-simply-src=\"http://pitch.se-examples.muze.nl/img/icons/Bol_15.png\" alt=\"\"> Websites with CMS or pagebuilder<br></p><p class=\"simply-text-align-left\"><img data-simply-src=\"http://pitch.se-examples.muze.nl/img/icons/Bol_09.png\" alt=\"\"> Projected licences sold in 2 years<br></p><p><br>\n</p>",
+						"sectionWrapper": {
+							"data-state": "simply-filter simply-covered-left simply-orange",
+							"data-background-image": "/img/H_01.jpg"
+						},
+						"data-simply-template": "Simple"
+					},
+					{
+						"section": "<h1>Customer</h1><p>Frontend developer<br></p><p><img data-simply-src=\"http://pitch.se-examples.muze.nl/img/frontend_developer.jpg\" alt=\"\" class=\"wide\"><br></p><p>Knows HTML/CSS</p><p>Feels creatively restricted by CMS <br></p>",
+						"sectionWrapper": {
+							"data-state": "simply-filter simply-covered-left simply-purple",
+							"data-background-image": "/img/H_01.jpg"
+						},
+						"data-simply-template": "Simple"
+					},
+					{
+						"section": "<h1>Competitors</h1><p><img data-simply-src=\"http://pitch.se-examples.muze.nl/img/competitors.jpg\" alt=\"\" class=\"large\"><br></p>",
+						"sectionWrapper": {
+							"data-state": "simply-filter simply-covered-left simply-aqua",
+							"data-background-image": "/img/H_01.jpg"
+						},
+						"data-simply-template": "Simple"
+					}
+				],
+				"data-simply-template": "Nested"
+			},
+			{
+				"sections": [
+					{
+						"section": "Business Model<br>",
+						"subtitle": "license per domain",
+						"table": "<p>\n\t\t\t\t\t\t\t</p><table class=\"simply-text-align-center\"><tbody><tr><th></th><th>Price</th><th>Cost<br></th><th>Revenue</th></tr><tr><th>Transactional<br>License<br></th><td>\u20ac 99,-<br>once<br></td><td>\u20ac 0,01<br>per month<br></td><td>\u20ac 99,-<br>over 2 years<br></td></tr><tr><th>Recurring<br>License<br></th><td>\u20ac 4,-<br>per month<br></td><td>\u20ac 0,01<br>per month<br></td><td>\u20ac 96,-<br>over 2 years<br></td></tr></tbody></table><p>\n\t\t\t\t\t\t</p>",
+						"sectionWrapper": {
+							"data-state": "simply-filter simply-covered-left simply-orange",
+							"data-background-image": "/img/H_06.jpg"
+						},
+						"data-simply-template": "Table"
+					},
+					{
+						"section": "<h1>Sales</h1><p>Online sales</p><p><br></p><p>Partner sales</p><p>via design agencies<br></p><p><br></p>",
+						"sectionWrapper": {
+							"data-state": "simply-filter simply-purple",
+							"data-background-image": "/img/H_05.jpg"
+						},
+						"data-simply-template": "Simple"
+					},
+					{
+						"section": "<h1>Marketing</h1><p>Social media</p><p><br></p><p>Blogs</p><p><br></p><p>(Online) magazines</p><p><br></p><p>Endorsements<br></p>",
+						"sectionWrapper": {
+							"data-state": "simply-filter simply-aqua",
+							"data-background-image": "/img/H_05.jpg"
+						},
+						"data-simply-template": "Simple"
+					}
+				],
+				"data-simply-template": "Nested"
+			},
+			{
+				"sections": [
+					{
+						"section": "<h1>Revenue projection</h1><p><img data-simply-src=\"http://pitch.se-examples.muze.nl/img/revenue.jpg\" alt=\"\" class=\"large\"><br></p><p><br></p>",
+						"sectionWrapper": {
+							"data-state": "simply-filter simply-orange",
+							"data-background-image": "/img/H_02.jpg"
+						},
+						"data-simply-template": "Simple"
+					},
+					{
+						"section": "Cost projection<br>",
+						"subtitle": "after investment",
+						"table": "<p>\n\t\t\t\t\t\t\t</p><table><tbody><tr><th></th><th>Marketing<br>Sales<br></th><th>Development</th><th>Other</th></tr><tr><th>Year 1<br></th><td>\u20ac 145k</td><td>\u20ac 90k</td><td>\u20ac 100k</td></tr><tr><th>Year 2<br></th><td>\u20ac 475k</td><td>\u20ac 130k</td><td>\u20ac 160k</td></tr></tbody></table><p>\n\t\t\t\t\t\t</p>",
+						"sectionWrapper": {
+							"data-state": "simply-filter simply-purple",
+							"data-background-image": "/img/H_02.jpg"
+						},
+						"data-simply-template": "Table"
+					},
+					{
+						"section": "<h1>ROI</h1><p>Positive cash flow will be reached 2 years after investment</p><p>ROI will be reached 3 years after investment<br></p>",
+						"sectionWrapper": {
+							"data-state": "simply-filter simply-aqua",
+							"data-background-image": "/img/H_02.jpg"
+						},
+						"data-simply-template": "Simple"
+					}
+				],
+				"data-simply-template": "Nested"
+			},
+			{
+				"sections": [
+					{
+						"section": "<h1>Roadmap</h1><p><img data-simply-src=\"http://pitch.se-examples.muze.nl/img/roadmap.png\" alt=\"\" class=\"wide\"></p><p>\n</p>",
+						"sectionWrapper": {
+							"data-state": "simply-filter simply-covered-right simply-orange",
+							"data-background-image": "/img/H_06.jpg"
+						},
+						"data-simply-template": "Simple"
+					},
+					{
+						"section": "<h1>Traction</h1><p>Web Summit 2016</p><p>Collision 2017</p><p class=\"simply-text-align-center\">TheNextWomen Pitch Competition 2017</p><p class=\"simply-text-align-center\">(semi-finals)</p><p class=\"simply-text-align-center\">Accenture Innovation Awards Competition 2017<br></p>",
+						"sectionWrapper": {
+							"data-state": "simply-filter simply-covered-left simply-purple",
+							"data-background-image": "/img/H_06.jpg"
+						},
+						"data-simply-template": "Simple"
+					}
+				],
+				"data-simply-template": "Nested"
+			},
+			{
+				"sections": [
+					{
+						"section": "<h1>Founders</h1><p><img data-simply-src=\"http://pitch.se-examples.muze.nl/img/team/team_08.jpg\" alt=\"\" class=\"large\"></p><p><a href=\"https://www.linkedin.com/in/poefke/\">Auke van Slooten</a>|<a href=\"https://www.linkedin.com/in/lizannevanommeren/\">Lizanne Overkamp</a>|<a href=\"https://www.linkedin.com/in/yvobrevoort/\">Yvo Brevoort</a></p><p><a href=\"https://www.linkedin.com/in/yvobrevoort/\"></a><br>\n\n\n</p><p><br></p>",
+						"sectionWrapper": {},
+						"data-simply-template": "Simple"
+					},
+					{
+						"section": "<h1>Experience</h1><p>3 founders together:</p><p>40 years of webdevelopment</p><p>50 years of entrepreneurship<br></p>",
+						"sectionWrapper": {
+							"data-state": "simply-filter simply-purple",
+							"data-background-image": "/img/H_03.jpg"
+						},
+						"data-simply-template": "Simple"
+					},
+					{
+						"section": "<h1>Team</h1><p><img data-simply-src=\"http://pitch.se-examples.muze.nl/img/team/websummit.jpg\" alt=\"\" class=\"large\"></p><p>Full stack development|Design|Marketing<br></p>",
+						"sectionWrapper": {
+							"data-state": "simply-filter simply-aqua",
+							"data-background-image": "/img/H_03.jpg"
+						},
+						"data-simply-template": "Simple"
+					},
+					{
+						"section": "<h1>Organization</h1><p><img data-simply-src=\"http://pitch.se-examples.muze.nl/img/organization.png\" alt=\"\" class=\"fullwidth\"><br></p>",
+						"sectionWrapper": {},
+						"data-simply-template": "Simple"
+					}
+				],
+				"data-simply-template": "Nested"
+			},
+			{
+				"sections": [
+					{
+						"section": "<h1>Investment Opportunity</h1><p>We are looking for \u20ac 350k</p><p><br></p><p>Fund the future of web creation!<br></p>",
+						"sectionWrapper": {
+							"data-state": "simply-filter simply-open-left simply-aqua",
+							"data-background-image": "/img/H_01.jpg"
+						},
+						"data-simply-template": "Simple"
+					}
+				],
+				"data-simply-template": "Nested"
+			}
+		]
+	},
+	"/product/": {
+		"slides": [
+			{
+				"section": "<p><img data-simply-src=\"http://pitch.se-examples.muze.nl/img/Logo_SimplyEdit_Wit.svg\" alt=\"\" class=\"fullwidth\"></p><p>Finally, a Simple Web Editor that just works.</p>",
+				"sectionWrapper": {
+					"data-state": "simply-filter simply-orange",
+					"data-background-image": "/img/H_04.jpg"
+				},
+				"data-simply-template": "Simple"
+			},
+			{
+				"sections": [
+					{
+						"section": "Introductie",
+						"sectionWrapper": {}
+					},
+					{
+						"section": "Probleem",
+						"sectionWrapper": {}
+					},
+					{
+						"section": "Oplossing",
+						"sectionWrapper": {}
+					}
+				],
+				"data-simply-template": "Nested"
+			},
+			{
+				"sections": [
+					{
+						"section": "SimplyEdit",
+						"sectionWrapper": {}
+					},
+					{
+						"section": "Voordelen",
+						"sectionWrapper": {}
+					}
+				],
+				"data-simply-template": "Nested"
+			},
+			{
+				"sections": [
+					{
+						"section": "<p>Portfolio</p><p>Site 1<br></p>",
+						"sectionWrapper": {}
+					},
+					{
+						"section": "Site 2<br>",
+						"sectionWrapper": {}
+					},
+					{
+						"section": "Site 3<br>",
+						"sectionWrapper": {}
+					}
+				],
+				"data-simply-template": "Nested"
+			},
+			{
+				"sections": [
+					{
+						"section": "<p>Portfolio</p><p>Silk<br></p>",
+						"sectionWrapper": {}
+					},
+					{
+						"section": "webshop",
+						"sectionWrapper": {}
+					}
+				],
+				"data-simply-template": "Nested"
+			},
+			{
+				"sections": [
+					{
+						"section": "<p>Portfolio applicaties</p><p>Reserveringsmodule<br></p>",
+						"sectionWrapper": {}
+					},
+					{
+						"section": "Yoast plugin<br>",
+						"sectionWrapper": {}
+					},
+					{
+						"section": "Dashboard",
+						"sectionWrapper": {}
+					}
+				],
+				"data-simply-template": "Nested"
+			},
+			{
+				"sections": [
+					{
+						"section": "Technische achtergrond<br>",
+						"sectionWrapper": {}
+					},
+					{
+						"section": "Iets dieper<br>",
+						"sectionWrapper": {}
+					},
+					{
+						"section": "Nog iets dieper<br>",
+						"sectionWrapper": {}
+					}
+				],
+				"data-simply-template": "Nested"
+			},
+			{
+				"sections": [
+					{
+						"section": "Prijsstelling",
+						"sectionWrapper": {}
+					},
+					{
+						"section": "Extra opties<br>",
+						"sectionWrapper": {}
+					},
+					{
+						"section": "Hoe aan te schaffen<br>",
+						"sectionWrapper": {}
+					}
+				],
+				"data-simply-template": "Nested"
+			},
+			{
+				"sections": [
+					{
+						"section": "contact",
+						"sectionWrapper": {}
+					}
+				],
+				"data-simply-template": "Nested"
+			}
+		]
+	}
+}
