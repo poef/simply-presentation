@@ -10,7 +10,9 @@
 			},
 			{
 				"section": "<p>This site is editable using SimplyEdit,<br>and hosted on GitHub.</p>",
-				"sectionWrapper": {},
+				"sectionWrapper": {
+					"data-state": "simply-filter simply-orange"
+				},
 				"data-simply-template": "Simple"
 			}
 		]
