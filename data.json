@@ -7,6 +7,11 @@
 					"data-state": "simply-filter simply-orange"
 				},
 				"data-simply-template": "Simple"
+			},
+			{
+				"section": "<p>This site is editable using SimplyEdit,<br>and hosted on GitHub.</p>",
+				"sectionWrapper": {},
+				"data-simply-template": "Simple"
 			}
 		]
 	}
