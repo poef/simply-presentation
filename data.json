@@ -2,18 +2,26 @@
 	"/": {
 		"slides": [
 			{
-				"section": "<p>Welcome<br><img data-simply-src=\"https://ylebre.github.io/simply-presentation/img/Logo_Wit_180x180_transp@2x.png\" alt=\"\"></p>",
+				"data-simply-template": "Simple",
 				"sectionWrapper": {
 					"data-state": "simply-filter simply-orange"
 				},
-				"data-simply-template": "Simple"
+				"section": "<p>Welcome<br><img data-simply-src=\"https://ylebre.github.io/simply-presentation/img/Logo_Wit_180x180_transp@2x.png\" alt=\"\"></p>"
 			},
 			{
-				"section": "<p>This site is editable using SimplyEdit,<br>and hosted on GitHub.</p>",
+				"data-simply-template": "Simple",
 				"sectionWrapper": {
 					"data-state": "simply-filter simply-orange"
 				},
-				"data-simply-template": "Simple"
+				"section": "<p>This site is editable using SimplyEdit,<br>and hosted on GitHub.</p>"
+			},
+			{
+				"data-simply-template": "Simple",
+				"sectionWrapper": {
+					"data-state": "simply-filter simply-orange",
+					"data-background-image": "img/H_03.jpg"
+				},
+				"section": "Reveal.js powers the layout and slides."
 			}
 		]
 	}
