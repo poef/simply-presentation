@@ -397,5 +397,14 @@
 				"data-simply-template": "Nested"
 			}
 		]
+	},
+	"/simply-presentation/": {
+		"slides": [
+			{
+				"section": "Slide 1",
+				"sectionWrapper": {},
+				"data-simply-template": "Simple"
+			}
+		]
 	}
 }
