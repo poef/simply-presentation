@@ -487,17 +487,17 @@
 					callback();
 				}
 
-				document.querySelector("#simply-login .simply-message").innerHTML = "Login with Github:";
+				editor.toolbarsContainer.querySelector("#simply-login .simply-message").innerHTML = "Login with Github:";
 
-				editor.plugins.dialog.open(document.getElementById('simply-login'));
+				editor.plugins.dialog.open(editor.toolbarsContainer.getElementById('simply-login'));
 				window.setTimeout(function() {
 					document.querySelector("#simply-login input").focus();
 				}, 10);
 				var handleLogin = function(evt) {
 					evt.preventDefault();
 					editor.plugins.dialog.close();
-					document.querySelector("#simply-login input[value=Login]").removeEventListener("click", handleLogin);
-					document.querySelector("#simply-login input[value=Cancel]").removeEventListener("click", handleLogin);
+					editor.toolbarsContainer.querySelector("#simply-login input[value=Login]").removeEventListener("click", handleLogin);
+					editor.toolbarsContainer.querySelector("#simply-login input[value=Cancel]").removeEventListener("click", handleLogin);
 
 					if (evt.target.getAttribute("value") == 'Login') {
 						editor.storage.github = new Github({
@@ -508,8 +508,8 @@
 						callback();
 					}
 				};
-				document.querySelector("#simply-login input[value=Login]").addEventListener("click", handleLogin);
-				document.querySelector("#simply-login input[value=Cancel]").addEventListener("click", handleLogin);
+				editor.toolbarsContainer.querySelector("#simply-login input[value=Login]").addEventListener("click", handleLogin);
+				editor.toolbarsContainer.querySelector("#simply-login input[value=Cancel]").addEventListener("click", handleLogin);
 			};
 			editor.loadToolbar("//yvo.muze.nl/simply-edit/simply/plugin.simply-login.html");
 
