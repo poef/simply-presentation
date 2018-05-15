@@ -486,12 +486,16 @@
 				if (!editor.toolbarsContainer || !editor.toolbarsContainer.getElementById("simply-login")) {
 					callback();
 				}
-
+				var message = editor.toolbarsContainer.querySelector("#simply-login .simply-message");
+				if (!message) {
+					callback();
+				}
+				
 				editor.toolbarsContainer.querySelector("#simply-login .simply-message").innerHTML = "Login with Github:";
 
 				editor.plugins.dialog.open(editor.toolbarsContainer.getElementById('simply-login'));
 				window.setTimeout(function() {
-					document.querySelector("#simply-login input").focus();
+					editor.toolbarsContainer.querySelector("#simply-login input").focus();
 				}, 10);
 				var handleLogin = function(evt) {
 					evt.preventDefault();
