@@ -5,15 +5,21 @@
 				"data-simply-template": "Simple",
 				"sectionWrapper": {
 					"data-state": "simply-filter simply-orange",
-					"data-background-image": "img/H_01.jpg"
+					"data-background-image": "img/H_01.jpg",
+					"data-transition": null,
+					"data-background-transition": null,
+					"data-background": null
 				},
-				"section": "<p>Welcome!!<br><img data-simply-src=\"https://ylebre.github.io/simply-presentation/img/Logo_Wit_180x180_transp@2x.png\" alt=\"\"></p>"
+				"section": "<p>Welcome!!!<br><img data-simply-src=\"https://ylebre.github.io/simply-presentation/img/Logo_Wit_180x180_transp@2x.png\" alt=\"\"></p>"
 			},
 			{
 				"data-simply-template": "Simple",
 				"sectionWrapper": {
 					"data-state": "simply-filter simply-orange",
-					"data-background-image": "img/H_06.jpg"
+					"data-background-image": "img/H_06.jpg",
+					"data-transition": null,
+					"data-background-transition": null,
+					"data-background": null
 				},
 				"section": "<p>This site is editable using SimplyEdit,<br>and hosted on GitHub.</p>"
 			},
@@ -21,7 +27,10 @@
 				"data-simply-template": "Simple",
 				"sectionWrapper": {
 					"data-state": "simply-filter simply-orange",
-					"data-background-image": "img/H_03.jpg"
+					"data-background-image": "img/H_03.jpg",
+					"data-transition": null,
+					"data-background-transition": null,
+					"data-background": null
 				},
 				"section": "Reveal.js powers the layout and slides."
 			},
@@ -29,7 +38,10 @@
 				"data-simply-template": "Simple",
 				"sectionWrapper": {
 					"data-state": "simply-filter simply-orange",
-					"data-background-image": "img/H_05.jpg"
+					"data-background-image": "img/H_05.jpg",
+					"data-transition": null,
+					"data-background-transition": null,
+					"data-background": null
 				},
 				"section": "<p>That is all for now, thanks for watching!</p><p><a href=\"https://simplyedit.io\">simplyedit.io</a></p>"
 			}
