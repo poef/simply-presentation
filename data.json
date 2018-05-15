@@ -21,7 +21,7 @@
 					"data-background-transition": null,
 					"data-background": null
 				},
-				"section": "<p>This site is editable using SimplyEdit,<br>and hosted on GitHub.</p>"
+				"section": "<p>This site is editable using SimplyEdit,<br>and hosted on GitHub.</p><p>It uses a custom domain and is served over HTTPS.</p>"
 			},
 			{
 				"data-simply-template": "Simple",
