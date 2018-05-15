@@ -484,11 +484,11 @@
 		<script>
 			editor.storageConnectors.github.connect = function(callback) {
 				if (!editor.toolbarsContainer || !editor.toolbarsContainer.getElementById("simply-login")) {
-					callback();
+					return callback();
 				}
 				var message = editor.toolbarsContainer.querySelector("#simply-login .simply-message");
 				if (!message) {
-					callback();
+					return callback();
 				}
 				
 				editor.toolbarsContainer.querySelector("#simply-login .simply-message").innerHTML = "Login with Github:";
