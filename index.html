@@ -492,7 +492,10 @@
 				}
 				
 				editor.toolbarsContainer.querySelector("#simply-login .simply-message").innerHTML = "Login with Github:";
-
+				editor.toolbarsContainer.querySelector("#simply-login").addEventListener("keypress", function(evt) {
+					evt.stopPropagation();
+				});
+				
 				editor.plugins.dialog.open(editor.toolbarsContainer.getElementById('simply-login'));
 				window.setTimeout(function() {
 					editor.toolbarsContainer.querySelector("#simply-login input").focus();
