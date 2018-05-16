@@ -524,6 +524,9 @@
 
 			document.addEventListener("simply-toolbars-loaded", function() {
 				editor.storage.connect(function() {
+					if (!editor.storage.repo) {
+						return;
+					}
 					editor.storage.repo.read(editor.storage.repoBranch, "data.json", function(err, data) {
 						if (data) {
 							editor.currentData = JSON.parse(data);
